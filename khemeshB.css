@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300;1,400&family=Rampart+One&family=Source+Code+Pro:wght@300&family=Ubuntu:ital,wght@1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* navbar styling */
+.navbar{
+    margin-bottom: -10%;
+    width: 100%;
+    font-family:'ubuntu', sans-serif;
+    padding: 30px 0;
+    transition: all 0.3s ease;
+    
+}
+.navbar .menu li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover{
+    color: crimson;
+}
+
+.navbar .sticky{
+    padding: 15px 0;
+    background: crimson;
+}
+
+
+.navbar .logo a{
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    margin-top: 570px;
+    width: 42px;
+    background: crimson;
+    right: 30px; 
+    bottom: 1 0px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    /* opacity: 0; */
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    opacity: 0;
+    bottom: 30px;
+    pointer-events: auto;    
+}
+
+/* Home section styling */
+.home{
+    display: flex;
+    background: url("images/kho.jpg") no-repeat center;
+    height: 100vh;
+    color: white;
+    min-height: 500px;
+    font-family: 'ubuntu', sans-serif;
+}
+
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1{
+    font-size: 27px;
+}
+
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: crimson;
+    background: none;
+
+}
+
+/* menu-tbn styling */
+.menu-btn{
+    color:#fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* about section styling */
+.section{
+    padding: 100px 0;
+}
+.about, .service, .skills, .team, .contact{
+    font-family: 'poppins', sans-serif;
+}
+section .tittle{
+    font-family: 'ubuntu', sans-serif;
+    text-align:  center;
+    font-size: 40px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+section.tittle::before{
+    content: "";
+    position: absolute;
+    width: 180px;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%);
+    height: 3px;
+    background: #111;
+}
+section .tittle::after{
+    font-size: 20px ;
+    color: crimson;
+    position: absolute;
+    left: 50%;
+    margin-top: 40px;
+    transform: translate(-50%);
+    padding: 5px;
+    
+}
+.about .tittle::after{
+    content: "Who i am";
+}
+
+.about .about-content, .service .serv-content,
+.skills .skills-content, .contact-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+}
+.about .about-content .left{
+    width: 45%;
+}
+
+/* services section styling */
+.service .tittle::after
+.team .tittle::after{
+    content: "What is provide";
+    background: #111;
+}
+.service, .team{
+    background: #111;
+    color: #fff;
+}
+.service .tittle::before
+.team .tittle::before{
+    background: #fff;
+}
+.service .serv-content .card{
+    width: 360px;
+    background: #222;
+    text-align: center;
+    border-radius: 25px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+/* .service .serv-content .card:hover{
+    background: crimson;
+} */
+/* .service .serv-content .card:hover i{
+    background: #fff;
+} */
+.service .serv-content .card i{
+    font-size: 50px;
+    color: crimson;
+    /* transition: color 0.3 ease; */
+}
+.service .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.service .serv-content .card .box{
+    transition: all 0.3 ease;
+}
+.service .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+
+/* skills section styling */
+.skills .tittle::after{
+    content: "What i Know";
+}
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+.skills .skills-content .left .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p{
+    text-align: justify;
+}
+.skills .skills-content .left a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3 ease;
+}
+.skills .skills-content .left a:hover{
+    color: crimson;
+    background: none;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgray;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute ;
+    height: 100%;
+    width: 80%;
+    left: 0;
+    top: 0;
+    background: crimson;
+
+}
+.skills-content .right .html::before{
+    width: 90%;
+}
+.skills-content .right .css::before{
+    width: 90%;
+}
+.skills-content .right .line-js::before{
+    width: 10%;
+}
+
+/* team section styling */
+/* .team .tittle::after{
+    content: "Who with me";
+}
+.team .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+}
+.team .carousel .card .text{
+     font-size: 25px;
+     font-weight: 500;
+     margin: 10px 0 7px 0;
+}
+.team .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.team .carousel .card:hover{
+    background: crimson;
+}
+.team .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.team .carousel .card:hover img{
+     border-color: #fff;
+}
+.team .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+} */
+/* .owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    outline: none!important;
+    border-radius: 50%;
+     border: 2px solid crimson!important;
+     margin: 0 5px; 
+     transition: all 0.3 ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: crimson!important;
+} */
+
+/* contact section styling */
+.contact .tittle::after{
+    content: "Get In Touch";
+}
+.contact .contact-content .column{
+    width: 50%;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: crimson;
+}
+.contact ,.contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-tittle{
+    color: #333;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height: 80px;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .button{
+    height: 44px;
+    width: 170px;
+    margin-top: 30px;
+} 
+.contact .right form .button button{
+   width: 100%;
+   height: 100%;
+   border: 2px solid crimson; 
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease ;
+}
+.contact .right form .button button:hover{
+    color: crimson;
+    background:none ;
+}
+
+.contact .right form .field input
+{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'poppins', sans-serif;
+}
+
+
+
+/* Responsive media query styling */
+@media (max-width:950px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .max-width{
+        padding: 0 50px;
+    }
+    .navbar .menu{
+        position: fixed;
+        background: #111;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu .active{
+        left: 0;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+}
+.about .about-content .column{
+    width: 50%;
+}
+
